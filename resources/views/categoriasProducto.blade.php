@@ -143,6 +143,8 @@
                                     <a href="{{route('contacto')}}">
                                         <button class="btn consultarBtn">Consultar</button>
                                     </a>
+
+                                    @if($categoria['nombre'] !== 'Marcas propias')
                                     <div class="row d-flex justify-content-around mt-3">
                                         <div class="col-lg-6">
                                             @auth
@@ -193,6 +195,7 @@
                                         </div>
 
                                     </div>
+                                    @endif
                                 </div>
 
 
@@ -206,7 +209,7 @@
                     <div class="mt-5">
                         <p class="titulo">Productos relacionados</p>
 
-                        <div class="row flex-wrap">
+                        <div class="row flex-wrap" style="row-gap: 10px !important;">
 
                             @foreach ($productos as $producto)
                                 <div class="col-lg-4">
@@ -237,7 +240,7 @@
                         </div>
                     </div>
                 @else
-                    <div class="row flex-wrap">
+                    <div class="row flex-wrap" style="row-gap: 10px !important;">
 
                         @foreach ($productos as $producto)
                             <div class="col-lg-4">

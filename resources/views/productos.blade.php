@@ -4,7 +4,7 @@
 <div class="container">
     <p class="indicador"><b>Inicio</b> / Productos</p>
         <div>
-            <div class="row flex-wrap categorias">
+            <div class="row flex-wrap categorias" >
                 @foreach ($categorias as $categoria)
                     <div class="col-lg-4">
                         <a href="{{ route('categoria', ['id' => $categoria->id, 'idProducto' => 0]) }}"  class="text-decoration-none">
